@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller;
+package com.ocbc.webview.webviewchatbotocbc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
