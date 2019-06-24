@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/red.css?v=7">
+
+    <link rel="stylesheet" href="css/ocbcnisp.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <!-- INSERT CONTENT START -->
+
+    <script>
+        $(function () {
+
+            $('#countrySelect').on('change', function () {
+                var cvalue = $('option:selected', this).data('display-value');
+                $('#countryValue').val(cvalue);
+                $('#countryValue').val(cvalue);
+            });
+        });
+    </script>
+
+    <div class="ocbc_webview">
+
+        <div class="ocbc_webview_overlay"></div>
+
+        <div class="ocbc_webview_content">
+
+            <div class="lifegoalCalculator">
+
+                <div class="titleBar">
+                    Pendidikan Kuliah Anak
+                </div>
+
+                <div class="calcInput">
+
+                    <div class="formRow">
+                        <input type="number" class="i4" value="5" />
+                        <div class="left">Usia Anak</div>
+                        <div class="right">tahun</div>
+                    </div>
+
+                    <div class="formRow">
+                        <input id="countryValue" type="text" class="i5" value="Singapura" disabled />
+                        <select id="countrySelect" class="countrySelect">
+                            <option data-display-value="Singapura">Singapura</option>
+                            <option data-display-value="Malaysia">Malaysia</option>
+                            <option data-display-value="Indonesia">Indonesia</option>
+                        </select>
+                        <div class="left">Negara</div>
+                    </div>
+
+
+
+                    <div class="formRow">
+                        <input type="number" class="i6" value="5" />
+                        <div class="left">Dana tersedia Rp</div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="onBtn">Hitung Ulang</button>
+                    </div>
+
+                </div>
+
+                <div class="calcResult">
+                    <div class="text-center">
+                        Dewi membutuhkan dana hingga
+                        <b>Rp 3,756,001,657</b> wujudkan dengan :
+
+                    </div>
+
+                    <div class="resultGraph ">
+                        <div class="infoCol left">
+                            <div class="row title"><span>Tabungan</span></div>
+                            <div class="row desc">Menyisihkan hingga</div>
+                            <div class="row value">Rp 210.040.000,-</div>
+                            <div class="row note">(2% laba per tahun)</div>
+                        </div>
+
+                        <div class="infoCol right">
+                            <div class="row title"><span>Investasi</span></div>
+                            <div class="row desc">Menyisihkan hingga</div>
+                            <div class="row value">Rp 860.040.000,-</div>
+                            <div class="row note">(7.26% laba per tahun)</div>
+                        </div>
+
+                        <img class="graphBG" src="images/graph2.png" />
+
+                    </div>
+
+                    <div class="text-center">
+                        *Angka hanya estimasi. Untuk angka sesuai dengan profil Dewi, silahkan melengkapi profil risiko
+                        Dewi selanjutnya.
+                        <br> <br>
+
+                        <button class="onBtn grey bordered">Ganti Life Goal</button>
+                        <button class="onBtn">Goal Sudah Sesuai</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

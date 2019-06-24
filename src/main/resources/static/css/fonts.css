@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B5Plain.eot');
+    src: url('../fonts/TheSans-B5Plain.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B5Plain.woff2') format('woff2'),
+        url('../fonts/TheSans-B5Plain.woff') format('woff'),
+        url('../fonts/TheSans-B5Plain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B7Bold.eot');
+    src: url('../fonts/TheSans-B7Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B7Bold.woff2') format('woff2'),
+        url('../fonts/TheSans-B7Bold.woff') format('woff'),
+        url('../fonts/TheSans-B7Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B2ExtraLight.eot');
+    src: url('../fonts/TheSans-B2ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B2ExtraLight.woff2') format('woff2'),
+        url('../fonts/TheSans-B2ExtraLight.woff') format('woff'),
+        url('../fonts/TheSans-B2ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B6SemiBoldItalic.eot');
+    src: url('../fonts/TheSans-B6SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B6SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B6SemiBoldItalic.woff') format('woff'),
+        url('../fonts/TheSans-B6SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B9BlackItalic.eot');
+    src: url('../fonts/TheSans-B9BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B9BlackItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B9BlackItalic.woff') format('woff'),
+        url('../fonts/TheSans-B9BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B9Black.eot');
+    src: url('../fonts/TheSans-B9Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B9Black.woff2') format('woff2'),
+        url('../fonts/TheSans-B9Black.woff') format('woff'),
+        url('../fonts/TheSans-B9Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B8ExtraBold.eot');
+    src: url('../fonts/TheSans-B8ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B8ExtraBold.woff2') format('woff2'),
+        url('../fonts/TheSans-B8ExtraBold.woff') format('woff'),
+        url('../fonts/TheSans-B8ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B7BoldItalic.eot');
+    src: url('../fonts/TheSans-B7BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B7BoldItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B7BoldItalic.woff') format('woff'),
+        url('../fonts/TheSans-B7BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B3LightItalic.eot');
+    src: url('../fonts/TheSans-B3LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B3LightItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B3LightItalic.woff') format('woff'),
+        url('../fonts/TheSans-B3LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B4SemiLight.eot');
+    src: url('../fonts/TheSans-B4SemiLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B4SemiLight.woff2') format('woff2'),
+        url('../fonts/TheSans-B4SemiLight.woff') format('woff'),
+        url('../fonts/TheSans-B4SemiLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B2ExtraLightItalic.eot');
+    src: url('../fonts/TheSans-B2ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B2ExtraLightItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B2ExtraLightItalic.woff') format('woff'),
+        url('../fonts/TheSans-B2ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B6SemiBold.eot');
+    src: url('../fonts/TheSans-B6SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B6SemiBold.woff2') format('woff2'),
+        url('../fonts/TheSans-B6SemiBold.woff') format('woff'),
+        url('../fonts/TheSans-B6SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B5PlainItalic.eot');
+    src: url('../fonts/TheSans-B5PlainItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B5PlainItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B5PlainItalic.woff') format('woff'),
+        url('../fonts/TheSans-B5PlainItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B3Light.eot');
+    src: url('../fonts/TheSans-B3Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B3Light.woff2') format('woff2'),
+        url('../fonts/TheSans-B3Light.woff') format('woff'),
+        url('../fonts/TheSans-B3Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B4SemiLightItalic.eot');
+    src: url('../fonts/TheSans-B4SemiLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B4SemiLightItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B4SemiLightItalic.woff') format('woff'),
+        url('../fonts/TheSans-B4SemiLightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-B8ExtraBoldItalic.eot');
+    src: url('../fonts/TheSans-B8ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TheSans-B8ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/TheSans-B8ExtraBoldItalic.woff') format('woff'),
+        url('../fonts/TheSans-B8ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'custicon';
+    src: url('../fonts/custicon.eot');
+    src: url('../fonts/custicon.eot#iefix') format('embedded-opentype'),
+         url('../fonts/custicon.woff2') format('woff2'),
+         url('../fonts/custicon.woff') format('woff'),
+         url('../fonts/custicon.ttf') format('truetype'),
+         url('../fonts/custicon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'custicon';
+      src: url('../font/custicon.svg?') format('svg');
+    }
+  }
+  */
+   
+   [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "custicon";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+   

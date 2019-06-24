@@ -1,0 +1,161 @@
+.dolphin-btn {
+  border-radius: 5px !important;
+  background: white !important;
+  border: 1px solid #ECF0F1!important;
+  color: #5d6d7e !important;
+  font-size: 12px !important;
+  margin:1px;
+  padding:3px;
+  text-align: center;
+  color: #3498DB !important;
+  text-decoration: none;
+}
+
+.dolphin-contain-buttons {
+	padding:0px!important;
+	background:white!important;
+	width:90%
+}
+
+.dolphin-contain-buttons::before {
+	border-top: none !important;
+}
+
+.dolphin-btn-cards {
+ 	width: 173px;
+}
+
+.dolphin-btn-cards__item {
+	display: flex;
+	padding: 1px;
+}
+
+.dolphin-btn-card {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.dolphin-btn-card__content {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	padding: 5px;
+	width: 173px;
+	height: 120px;
+}
+
+.dolphin-btn-card__image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	filter: contrast(95%);
+	height: 110px;
+	object-fit: cover;
+}
+
+.dolphin-btn-card__title {
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.dolphin-btn-card__text {
+	flex: 1 1 auto;
+	font-size: 10px;
+	margin: 0px;
+}
+
+.dolphin-btn-carousel {
+	display: inline-flex;
+	position: relative;
+	left: 0px;
+	transition: left 500ms ease-out;
+	width: 100%;
+}
+
+.truncate-160 {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 160px;
+	vertical-align: bottom;
+}
+
+.modal-map {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-map-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 1rem 1.5rem;
+	width: 30%;
+	border-radius: 0.5rem;
+	height: 70%;
+}
+
+.show-map-modal {
+	z-index: 10;
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-map-close-button {
+	float: right;
+	width: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	background-color: lightgray;
+}
+
+.modal-map-submit-button {
+	width: 100%;
+	height: 16px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	background-color: lightgray;
+	margin-top: 10px;
+}
+
+#map {
+	height: 78%;
+}
+
+#map #infowindow-content {
+	display: inline;
+}
+
+#mapSearchTextField {
+	padding-left: 10px;
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+	border: none;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+}
