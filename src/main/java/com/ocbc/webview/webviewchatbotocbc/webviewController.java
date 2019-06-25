@@ -16,15 +16,30 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class webviewController {
-    
+
     @GetMapping("/pendidikan")
     public String pendidikan() {
         return "pendidikan";
     }
-    
+
     @GetMapping("/growth")
     public String halo() {
-        
+
         return "growth";
     }
+
+    @GetMapping("/etc")
+    public String etc() {
+
+        return "etc";
+    }
+
+    @GetMapping("/product")
+    public String product() {
+
+        return "product";
+    }
+
+   
+
 }
