@@ -29,68 +29,81 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class webviewController {
 
-    @GetMapping("/pendidikan")
-    public String pendidikan() {
-
-        return "pendidikan";
-    }
-
-//    private List<String> getMobilDinamis(String url, String jsonName, String key) {
-//        List<String> result = new ArrayList<>();
+    @RequestMapping(value = {"/pendidikan/{customer_name}/{usia_anak}/{negara}/{dana_tersedia}"}, method = {RequestMethod.GET})
+    @GetMapping
+    public String pendidikan(@PathVariable String customer_name, @PathVariable String usia_anak, @PathVariable String negara, @PathVariable String dana_tersedia, Model model) {
 //        try {
 //            OkHttpUtil okHttpUtil = new OkHttpUtil();
 //            okHttpUtil.init(true);
+//            String url = "";
 //            Request request = new Request.Builder().url(url).get().build();
 //            Response response = okHttpUtil.getClient().newCall(request).execute();
 //
-//            String res = "{\"" + jsonName + "\":" + response.body().string() + "}";
-//
-//            JSONObject jsonObject = new JSONObject(res);
-//            JSONArray jSONArray = jsonObject.getJSONArray(jsonName);
-//            for (int i = 0; i < jSONArray.length(); i++) {
-//                JSONObject obj = (JSONObject) jSONArray.get(i);
-//                result.add(obj.getString(key));
-//            }
+//            JSONObject jsonObject = new JSONObject(response);
+//            int RC = jsonObject.getInt("RC");
+//            String Rate = jsonObject.getString("Rate");
+//            String Result = jsonObject.getString("Result");
 //        } catch (Exception e) {
-//
 //        }
-//        return result;
-//    }
-    @RequestMapping(value = {"/greeting/{Investment_Type}/{Investment_Amount}/{Tenor}"}, method = {RequestMethod.GET})
-    @GetMapping
-    public String halo(@PathVariable String Investment_Type, @PathVariable String Investment_Amount, @PathVariable String Tenor, Model model) {
 
-        model.addAttribute("Investment_Type", Investment_Type);
-        model.addAttribute("Investment_Amount", Investment_Amount);
-        model.addAttribute("Tenor", Tenor);
+        model.addAttribute("customer_name", customer_name);
+        model.addAttribute("usia_anak", usia_anak);
+        model.addAttribute("negara", negara);
+        model.addAttribute("dana_tersedia", dana_tersedia);
 
-        return "greeting";
+        return "pendidikan";
     }
 
     @RequestMapping(value = {"/growth/{Investment_Type}/{Investment_Amount}/{Tenor}"}, method = {RequestMethod.GET})
     @GetMapping
     public String growth(@PathVariable String Investment_Type, @PathVariable String Investment_Amount, @PathVariable String Tenor, Model model) {
-        try {
-            OkHttpUtil okHttpUtil = new OkHttpUtil();
-            okHttpUtil.init(true);
-            String url = "";
-            Request request = new Request.Builder().url(url).get().build();
-            Response response = okHttpUtil.getClient().newCall(request).execute();
-
-            JSONObject jsonObject = new JSONObject(response);
-            int RC = jsonObject.getInt("RC");
-            String Rate = jsonObject.getString("Rate");
-            String Result = jsonObject.getString("Result");
-        } catch (Exception e) {
-
-        }
+//        try {
+//            OkHttpUtil okHttpUtil = new OkHttpUtil();
+//            okHttpUtil.init(true);
+//            String url = "";
+//            Request request = new Request.Builder().url(url).get().build();
+//            Response response = okHttpUtil.getClient().newCall(request).execute();
+//
+//            JSONObject jsonObject = new JSONObject(response);
+//            int RC = jsonObject.getInt("RC");
+//            String Rate = jsonObject.getString("Rate");
+//            String Result = jsonObject.getString("Result");
+//        } catch (Exception e) {
+//        }
 
         model.addAttribute("Investment_Type", Investment_Type);
         model.addAttribute("Investment_Amount", Investment_Amount);
         model.addAttribute("Tenor", Tenor);
+
         return "growth";
     }
 
+    @RequestMapping(value = {"/etc/{customer_name}/{target_dana}/{dana_sekarang}/{jangka_waktu}"}, method = {RequestMethod.GET})
+    @GetMapping
+    public String etc(@PathVariable String customer_name, @PathVariable String target_dana, @PathVariable String dana_sekarang, 
+            @PathVariable String jangka_waktu, Model model) {
+//        try {
+//            OkHttpUtil okHttpUtil = new OkHttpUtil();
+//            okHttpUtil.init(true);
+//            String url = "";
+//            Request request = new Request.Builder().url(url).get().build();
+//            Response response = okHttpUtil.getClient().newCall(request).execute();
+//
+//            JSONObject jsonObject = new JSONObject(response);
+//            int RC = jsonObject.getInt("RC");
+//            String Rate = jsonObject.getString("Rate");
+//            String Result = jsonObject.getString("Result");
+//        } catch (Exception e) {
+//        }
+
+        model.addAttribute("customer_name", customer_name);
+        model.addAttribute("target_dana", target_dana);
+        model.addAttribute("dana_sekarang", dana_sekarang);
+        model.addAttribute("jangka_waktu", jangka_waktu);
+
+        return "etc";
+    }
+    
     @GetMapping("/etc")
     public String etc() {
 
