@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
-
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
+        <title>Pertumbuhan Aset</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" href="css/red.css?v=7">
 
         <link rel="stylesheet" href="css/ocbcnisp.css" type="text/css" />
@@ -53,9 +54,9 @@
 
                     <div class="calcResult">
                         <div class="text-center">
-                            Dengan <b>Rp 5.000.000</b>per Bulan (lumpsum)
-                            <br>
-                            selama <b>10 tahun</b> :
+                            <p th:text="'Dengan, Rp ' + ${Investment_Amount} + 'per Bulan (lumpsum)
+                               <br>
+                            selama <b>10 tahun</b> : '" />
                         </div>
 
                         <div class="resultGraph ">
