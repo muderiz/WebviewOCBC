@@ -67,7 +67,7 @@ public class webviewController {
             String url = "https://api.myjson.com/bins/6gjuh";
             Request request = new Request.Builder().url(url).get().build();
             Response response = okHttpUtil.getClient().newCall(request).execute();
-
+            
             JSONObject jsonObject = new JSONObject(response.body().string());
             ChannelId = jsonObject.getInt("Channel_ID");
             RC = jsonObject.getInt("RC");
@@ -83,9 +83,9 @@ public class webviewController {
         model.addAttribute("Investment_Amount", Investment_Amount);
         model.addAttribute("Tenor", Tenor);
         model.addAttribute("RC", RC);
-        model.addAttribute("Ext_Reff_ID", ExtReffId);
-        model.addAttribute("Rate", Rate);
-        model.addAttribute("Result", Result);
+        model.addAttribute("Ext_Reff_ID", ExtReffId.toString());
+        model.addAttribute("Rate", Rate.toString());
+        model.addAttribute("Result", Result.toString());
 
         return "growth";
     }
