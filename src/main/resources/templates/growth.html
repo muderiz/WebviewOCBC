@@ -2,9 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
 
-        <link th:rel="stylesheet" th:href="@{~/css/red.css?v=7}">
+        <link rel="stylesheet" th:href="/css/red.css?v=7">
 
-        <link th:rel="stylesheet" th:href="@{~/css/ocbcnisp.css}" type="text/css" />
+        <link rel="stylesheet" th:href="/css/ocbcnisp.css" type="text/css" />
     </head>
 
     <body>
@@ -20,11 +20,11 @@
                 var data = {key: key_in, message: message_in, label: label_in};
                 parent.postMessage(data, "*");
             }
-            function postToWebchat() {
-                text4 = "Sisihkan " + y + " waktu " + x + " tahun";
-                text5 = "Sisihkan " + rp + " per bulan dalam jangka waktu " + x + " tahun"
-                talk('0a0791f981051e7f31aac10c163877f2', text4, text5)
-            }
+//            function postToWebchat() {
+//                text4 = "Sisihkan " + y + " waktu " + x + " tahun";
+//                text5 = "Sisihkan " + rp + " per bulan dalam jangka waktu " + x + " tahun"
+//                talk('0a0791f981051e7f31aac10c163877f2', text4, text5)
+//            }
         </script>
 
         <div class="ocbc_webview">
@@ -42,12 +42,14 @@
                     <div class="calcInput">
 
                         <div class="formRow">
-                            <input type="number" class="i1" th:value="${Investment_Amount}" />
+                            <!--<input type="number" class="i1" th:value="${Investment_Amount}" />-->
+                            <input type="number" class="i1" th:value="3000000" />
                             <div class="left">Rp</div>
                             <div class="right">per Bulan</div>
                         </div>
 
                         <div class="formRow">
+                            <input type="number" class="i2" th:value="3" />
                             <input type="number" class="i2" th:value="${Tenor}" />
                             <div class="left">Selama</div>
                             <div class="right">tahun</div>
@@ -62,10 +64,12 @@
                     <div class="calcResult">
                         <div class="text-center">
                             <p>Dengan
-                                <b th:text="${Investment_Amount}"/> per Bulan (lumpsum)
+                                <b th:text="3000000"/> per Bulan (lumpsum)
+                                <!--<b th:text="${Investment_Amount}"/> per Bulan (lumpsum)-->
                                 <br>
                                 selama
-                                <b th:text="${Tenor}"/> tahun :
+                                <b th:text=3"/> tahun :
+                                <!--<b th:text="${Tenor}"/> tahun :-->
 
                         </div>
 
@@ -73,19 +77,21 @@
                             <div class="infoCol left">
                                 <div class="row title"><span>Tabungan</span></div>
                                 <div class="row desc">Pertumbuhan Hingga</div>
-                                <div class="row value"><span th:text="${result}"/></div>
+                                <div class="row value"><span th:text="800000000"/></div>
+                                <!--<div class="row value"><span th:text="${result}"/></div>-->
                                 <div class="row value"></div>
-                                <div class="row note">*<span th:text="${result}"/>laba per tahun</div>
+                                <div class="row note">*<span th:text="2"/>laba per tahun</div>
+                                <!--<div class="row note">*<span th:text="${result}"/>laba per tahun</div>-->
                             </div>
 
                             <div class="infoCol right">
                                 <div class="row title"><span>Investasi</span></div>
                                 <div class="row desc">Pertumbuhan Hingga</div>
                                 <div class="row value">Rp 860.040.000,-</div>
-                                <div class="row note">(7.26% labza per tahun)</div>
+                                <div class="row note">(7.26% laba per tahun)</div>
                             </div>
 
-                            <img class="graphBG" th:src="@{~/images/graph1.png}" />
+                            <img class="graphBG" th:src="/images/graph1.png" />
 
                         </div>
 
@@ -94,7 +100,7 @@
                             <br> <br>
 
                             <button class="onBtn grey bordered">Ganti Life Goal</button>
-                            <button class="onBtn" onclick="talk('${idWebchat}', '${Title}', '${Payload}')">Goal Sudah Sesuai</button>
+                            <button class="onBtn" th:onclick="talk('${idWebchat}', '${Title}', '${Payload}')">Goal Sudah Sesuai</button>
 
                         </div>
                     </div>

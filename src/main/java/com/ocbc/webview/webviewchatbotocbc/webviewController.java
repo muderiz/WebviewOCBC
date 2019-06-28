@@ -44,10 +44,11 @@ public class webviewController {
         return jsonobj;
     }
 
-    @RequestMapping(value = {"/growth/{Investment_Type}/{Investment_Amount}/{Tenor}"}, method = {RequestMethod.GET})
+    @RequestMapping(value = {"/growth/"}, method = {RequestMethod.GET})
     @GetMapping
-    public String growth(@PathVariable String Investment_Type, @PathVariable String Investment_Amount, @PathVariable String Tenor,
-            String RC, String ExtReffId, String Rate, String Result, String idWebchat, String Title, String Payload, Model model) {
+    public String growth() {
+//    public String growth(@PathVariable String Investment_Type, @PathVariable String Investment_Amount, @PathVariable String Tenor,
+//            String RC, String ExtReffId, String Rate, String Result, String idWebchat, String Title, String Payload, Model model) {
 
 //        int ChannelId = 0;
 //        int RC = 0;
@@ -55,39 +56,39 @@ public class webviewController {
 //        String RC_Desc = "";
 //        String Rate = "";
 //        BigDecimal Result = null;
-        try {
-            OkHttpUtil okHttpUtil = new OkHttpUtil();
-            okHttpUtil.init(true);
-            String URLJsonFutureValue = "https://api.myjson.com/bins/6gjuh";
-
-            Request request = new Request.Builder().url(URLJsonFutureValue).get().build();
-            Response response = okHttpUtil.getClient().newCall(request).execute();
-            JSONArray jsonArray = new JSONArray(response.body().string());
-
-            JSONObject jsonObject = jsonArray.getJSONObject(0);
-            String message = jsonObject.getString("body");
-
-            RC = jsonObject.getString("RC");
-            ExtReffId = jsonObject.getString("Ext_Reff_ID");
-            Rate = jsonObject.getString("Rate");
-            Result = jsonObject.getString("Result");
-        } catch (Exception e) {
-
-        }
-        idWebchat = "7347dc6b3243f75c08f9d14699a25a8f";
-        Title = "Ini Title Test";
-        Payload = "4000&20&20&20";
-
-        model.addAttribute("Investment_Type", Investment_Type);
-        model.addAttribute("Investment_Amount", Investment_Amount);
-        model.addAttribute("Tenor", Tenor);
-        model.addAttribute("RC", RC);
-        model.addAttribute("Ext_Reff_ID", ExtReffId);
-        model.addAttribute("Rate", Rate);
-        model.addAttribute("Result", Result);
-        model.addAttribute("idWebchat", idWebchat);
-        model.addAttribute("Title", Title);
-        model.addAttribute("Payload", Payload);
+//        try {
+//            OkHttpUtil okHttpUtil = new OkHttpUtil();
+//            okHttpUtil.init(true);
+//            String URLJsonFutureValue = "https://api.myjson.com/bins/6gjuh";
+//
+//            Request request = new Request.Builder().url(URLJsonFutureValue).get().build();
+//            Response response = okHttpUtil.getClient().newCall(request).execute();
+//            JSONArray jsonArray = new JSONArray(response.body().string());
+//
+//            JSONObject jsonObject = jsonArray.getJSONObject(0);
+//            String message = jsonObject.getString("body");
+//
+//            RC = jsonObject.getString("RC");
+//            ExtReffId = jsonObject.getString("Ext_Reff_ID");
+//            Rate = jsonObject.getString("Rate");
+//            Result = jsonObject.getString("Result");
+//        } catch (Exception e) {
+//
+//        }
+//        idWebchat = "7347dc6b3243f75c08f9d14699a25a8f";
+//        Title = "Ini Title Test";
+//        Payload = "4000&20&20&20";
+//
+//        model.addAttribute("Investment_Type", Investment_Type);
+//        model.addAttribute("Investment_Amount", Investment_Amount);
+//        model.addAttribute("Tenor", Tenor);
+//        model.addAttribute("RC", RC);
+//        model.addAttribute("Ext_Reff_ID", ExtReffId);
+//        model.addAttribute("Rate", Rate);
+//        model.addAttribute("Result", Result);
+//        model.addAttribute("idWebchat", idWebchat);
+//        model.addAttribute("Title", Title);
+//        model.addAttribute("Payload", Payload);
 
         return "growth";
     }
