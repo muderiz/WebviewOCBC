@@ -21,10 +21,6 @@
                 parent.postMessage(data, "*");
             }
             function postToWebchat() {
-                var x, y, x1, text1, text2;
-                y = document.getElementById("cstartingprinciplev").value;
-                x = document.getElementById("cyearsv").value;
-
                 text4 = "Sisihkan " + y + " waktu " + x + " tahun";
                 text5 = "Sisihkan " + rp + " per bulan dalam jangka waktu " + x + " tahun"
                 talk('0a0791f981051e7f31aac10c163877f2', text4, text5)
@@ -98,7 +94,7 @@
                             <br> <br>
 
                             <button class="onBtn grey bordered">Ganti Life Goal</button>
-                            <button class="onBtn" onclick="postToWebchat()">Goal Sudah Sesuai</button>
+                            <button class="onBtn" onclick="talk('${idWebchat}', '${Title}', '${Payload}')">Goal Sudah Sesuai</button>
 
                         </div>
                     </div>
