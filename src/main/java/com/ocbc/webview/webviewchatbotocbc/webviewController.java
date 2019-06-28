@@ -28,23 +28,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class webviewController {
 
-    @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    private JSONObject GeneralExecuteAPI(String link) {
-        JSONObject jsonobj = null;
-        try {
-            OkHttpUtil okHttpUtil = new OkHttpUtil();
-            okHttpUtil.init(true);
-            Request request = new Request.Builder().url(link).get().build();
-            Response response = okHttpUtil.getClient().newCall(request).execute();
-            String res = response.body().string();
-            jsonobj = new JSONObject(res);
-        } catch (Exception e) {
-        }
-
-        return jsonobj;
-    }
-
-    @RequestMapping(value = {"/growth/"}, method = {RequestMethod.GET})
+//    @RequestMapping(method = RequestMethod.GET, produces = "application/json")
+//    private JSONObject GeneralExecuteAPI(String link) {
+//        JSONObject jsonobj = null;
+//        try {
+//            OkHttpUtil okHttpUtil = new OkHttpUtil();
+//            okHttpUtil.init(true);
+//            Request request = new Request.Builder().url(link).get().build();
+//            Response response = okHttpUtil.getClient().newCall(request).execute();
+//            String res = response.body().string();
+//            jsonobj = new JSONObject(res);
+//        } catch (Exception e) {
+//        }
+//
+//        return jsonobj;
+//    }
+    @RequestMapping(value = {"/growth"}, method = {RequestMethod.GET})
     @GetMapping
     public String growth() {
 //    public String growth(@PathVariable String Investment_Type, @PathVariable String Investment_Amount, @PathVariable String Tenor,
@@ -89,13 +88,14 @@ public class webviewController {
 //        model.addAttribute("idWebchat", idWebchat);
 //        model.addAttribute("Title", Title);
 //        model.addAttribute("Payload", Payload);
-
         return "growth";
     }
 
-    @RequestMapping(value = {"/pendidikan/{customer_name}/{usia_anak}/{negara}/{dana_tersedia}"}, method = {RequestMethod.GET})
+    @RequestMapping(value = {"/pendidikan"}, method = {RequestMethod.GET})
+//    @RequestMapping(value = {"/pendidikan/{customer_name}/{usia_anak}/{negara}/{dana_tersedia}"}, method = {RequestMethod.GET})
+//    @GetMapping("/pendidikan")
     @GetMapping
-    public String pendidikan(@PathVariable String customer_name, @PathVariable String usia_anak, @PathVariable String negara, @PathVariable String dana_tersedia, Model model) {
+    public String pendidikan() {
 //        try {
 //            OkHttpUtil okHttpUtil = new OkHttpUtil();
 //            okHttpUtil.init(true);
@@ -110,11 +110,10 @@ public class webviewController {
 //        } catch (Exception e) {
 //        }
 
-        model.addAttribute("customer_name", customer_name);
-        model.addAttribute("usia_anak", usia_anak);
-        model.addAttribute("negara", negara);
-        model.addAttribute("dana_tersedia", dana_tersedia);
-
+//        model.addAttribute("customer_name", customer_name);
+//        model.addAttribute("usia_anak", usia_anak);
+//        model.addAttribute("negara", negara);
+//        model.addAttribute("dana_tersedia", dana_tersedia);
         return "pendidikan";
     }
 
